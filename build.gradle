@@ -15,7 +15,50 @@ repositories {
      maven { url "http://repo.maven.apache.org/maven2" }
 }
 dependencies {
-    compile group: 'org.jbehave', name: 'jbehave-spring', version:'4.0.5'
-    compile group: 'org.jbehave', name: 'jbehave-core', version:'4.0.5', classifier:'resources'
-    compile group: 'org.jbehave.site', name: 'jbehave-site-resources', version:'3.3'
+
+    compile 'commons-logging:commons-logging:1.2'
+    compile 'org.seleniumhq.selenium:selenium-support:2.53.1'
+    compile 'org.apache.axis:axis:1.4'
+    compile 'javax.xml:jaxrpc-api:1.1'
+    compile 'org.springframework:spring-context:4.0.5.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.0.5.RELEASE'
+    compile 'org.springframework:spring-web:4.2.4.RELEASE'
+    compile 'org.seleniumhq.selenium:selenium-firefox-driver:2.53.1'
+    compile 'org.hamcrest:hamcrest-library:1.2.1'
+    compile 'org.freemarker:freemarker:2.3.14'
+    compile 'org.jbehave:jbehave-core:4.0.3'
+    compile 'org.jbehave.site:jbehave-site-resources:3.2'
+    compile 'org.jbehave:jbehave-navigator:4.0.3'
+    compile('org.jbehave.web:jbehave-web-selenium:3.6-beta-2') {
+        exclude(module: 'jbehave-core')
+        exclude(module: 'selenium-java')
+    }
+    compile('org.seleniumhq.selenium.fluent:fluent-selenium:1.14.5') {
+        exclude(module: 'selenium-java')
+    }
+    compile('junit:junit-dep:4.11') {
+        exclude(module: 'hamcrest-core')
+    }
+    compile 'org.hamcrest:hamcrest-all:1.1'
+    compile('org.seleniumhq.selenium:selenium-java:2.53.1') {
+        exclude(module: 'hamcrest-core')
+    }
+    compile 'org.jbehave:jbehave-spring:4.0.3'
+    compile 'org.apache.poi:poi:3.10-FINAL'
+    compile 'log4j:log4j:1.2.17'
+    compile('org.apache.poi:poi-ooxml:3.10-FINAL') {
+        exclude(module: 'xml-apis')
+    }
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.4.2'
+    compile 'com.sun.jersey:jersey-client:1.19'
+    compile 'com.sun.jersey:jersey-bundle:1.19'
+    compile 'com.sun.jersey.contribs:jersey-apache-client:1.19'
+    compile 'org.slf4j:slf4j-nop:1.7.14'
+    compile 'com.oracle:ojdbc14:10.2.0.5.0'
+    compile 'de.schlichtherle.truezip:truezip-file:7.7.10'
+    compile 'de.schlichtherle.truezip:truezip-driver-file:7.7.10'
+    compile 'com.google.code.findbugs:annotations:3.0.0'
+
+
 }
